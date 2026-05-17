@@ -140,7 +140,16 @@ curl https://cache-engine.onrender.com/cache/stats/metrics
 # Switch to LFU
 curl -X POST "https://cache-engine.onrender.com/cache/config?policy=LFU&capacity=100"
 ```
+## Benchmark Results
 
+Tested with Apache JMeter — 200 concurrent users
+
+| Metric | Result |
+|--------|--------|
+| Throughput | 401 req/sec |
+| Average latency | 2ms |
+| Min latency | 0ms |
+| Error rate | 0% |
 ---
 
 

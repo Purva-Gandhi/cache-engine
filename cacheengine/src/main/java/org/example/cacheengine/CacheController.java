@@ -12,7 +12,7 @@ import org.example.TTLCache;
 public class CacheController {
 
     private final CacheService<String,String> cacheService=new CacheService<>(new LRUCache<>(100));
-    private final RateLimiter rateLimiter = new RateLimiter(3, 60);
+    private final RateLimiter rateLimiter = new RateLimiter(100, 60);
 
     @GetMapping("/{key}")
     public String get(@PathVariable String key,HttpServletRequest request){
